@@ -26,10 +26,11 @@ export const TarjetasDc = () => {
 
     return (
         <>
+        <h1 className='text-center font-black mt-6 text-6xl'>DC HEROES</h1>
             <div className="contenedor">
                 {personajes.map((item) => (
                     (item.tipo === "heroes-dc") ?
-                        <div className='card bg-black hover:bg-red-600 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none'>
+                        <div className='card fade-in bg-black hover:bg-red-600 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none'>
                             <img src={item.imagen} className="object-fill" alt='' />
                             <h1 className="uppercase font-bold pt-2">{item.nombre}</h1>
                             <p className='p-2'>Poderes: {item.poderes}</p>
