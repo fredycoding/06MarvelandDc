@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from 'axios'
+import 'animate.css'
 
 
 export const HeroeDetalle = () => {
@@ -36,7 +37,7 @@ export const HeroeDetalle = () => {
     return (
         <div className="text-center">
             {personaje.map((item) => (
-                <div className='card fade-in bg-black w-96 text-center m-auto mt-10'>
+                <div className='card bg-black w-96 text-center m-auto mt-10 animate__animated animate__bounceInLeft'>
                     <img src={item.imagen} className="object-fill w-96" alt='...' />
                     <h1 className="uppercase font-bold pt-2 text-3xl">{item.nombre}</h1>
                     <p className='p-2 text-xl'>Poderes: {item.descripcion}</p>
