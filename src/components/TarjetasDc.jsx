@@ -31,12 +31,11 @@ export const TarjetasDc = () => {
                 {personajes.map((item) => (
                     (item.tipo === "heroes-dc") ?
                         <div className='card fade-in bg-black hover:bg-red-600 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none'>
-                            <img src={item.imagen} className="object-fill" alt='' />
+                           <a href={`/heroe/${item.id}`}> <img src={item.imagen} className="object-fill" alt='...' /></a>
                             <h1 className="uppercase font-bold pt-2">{item.nombre}</h1>
-                            <p className='p-2'>Poderes: {item.poderes}</p>
+                            <p className='p-2'>{item.poderes}</p>
                         </div>
                         : ""
-
 
                 ))
 

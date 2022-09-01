@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { HeroeDetalle } from "../components/HeroeDetalle";
 import { Home } from "../components/Home";
 import { NavBar } from "../components/NavBar";
 import { TarjetasDc } from "../components/TarjetasDc";
@@ -12,6 +13,7 @@ export const AppNavigate = () => {
       <Routes>
         <Route path="dc" element={<TarjetasDc />} />
         <Route path="marvel" element={<TarjetasMarvel />} />
+        <Route path="heroe/:id" element={<HeroeDetalle />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </div>
