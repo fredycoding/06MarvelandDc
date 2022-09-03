@@ -12,16 +12,19 @@ export const HeroeDetalle = () => {
     const [idUrl, setIdUrl] = useState('')
     const [personaje, setPersonaje] = useState([])
 
+
     useEffect(() => {
-        //console.log(`/heroe/${id}`);
+        console.log(`/heroe/${id}`);
         setIdUrl(id)
     }, []);
+  
 
     useEffect(() => {
         const obtenerPost = async () => {
             try {
                 let response = await axios.get(`https://sheroesfredy.herokuapp.com/superheroes/?id=${idUrl}`);
-                let data = await response.data;       
+                let data = response.data;  
+                console.log("DATA: ", data)     
                 setPersonaje(data)
             } catch (err) {
                 // Errores
@@ -33,11 +36,16 @@ export const HeroeDetalle = () => {
 
     }, [idUrl])
 
+
+
     if(!personaje.length){         
         return(
+            <>
             <div className='flex justify-center items-center mt-40'>
-                <Loader/>
+                <Loader/>              
             </div>
+         
+            </>
         )
     }
 
