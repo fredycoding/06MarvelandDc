@@ -8,7 +8,6 @@ import { Loader } from "./Loader";
 export const HeroeDetalle = () => {
 
     let { id } = useParams();
-
     const [idUrl, setIdUrl] = useState('')
     const [personaje, setPersonaje] = useState([])
 
@@ -31,20 +30,17 @@ export const HeroeDetalle = () => {
                 alert("Data error: ", err);
             }
         };
-
         obtenerPost()
-
     }, [idUrl])
 
 
 
-    if(!personaje.length){         
+    if(!personaje.length){   
         return(
             <>
             <div className='flex justify-center items-center mt-40'>
                 <Loader/>              
-            </div>
-         
+            </div>         
             </>
         )
     }
